@@ -4,7 +4,7 @@ import Container from '../container/Container'
 function Navbar() {
     return (
         <Container >
-            <div className="h-20  shadow border-b bg-blue-50 flex justify-between items-center p-2 rounded-sm"  >
+            <div className="h-20  shadow border-b bg-blue-500 flex justify-between items-center p-2 rounded-sm"  >
                 <ul className='flex gap-2'>
                     <li>
                         <Link to="/" >Home</Link>
