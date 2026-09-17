@@ -1,18 +1,18 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "./pages/home/Home"
-import Navbar from "./components/navbar/Navbar"
 import Store from "./pages/store/Store"
+import Layout from "./components/Layout/Layout"
 
 function App() {
 
   return (
-    <>
-      <Navbar />
+    <Layout>
       <Routes>
-          <Route path="/"   element={<Home />} />
-          <Route path="/Store"   element={<Store />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Store" element={<Store />} />
       </Routes>
-    </>
+    </Layout>
+
   )
 }
 

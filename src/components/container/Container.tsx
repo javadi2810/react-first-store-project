@@ -1,11 +1,12 @@
 import React from 'react'
 type TContainer={
     children:React.ReactNode;
+    className?:string;
 }
 
-function Container({children}:TContainer) {
+function Container({children ,className}:TContainer) {
   return (
-    <div className='container mx-auto'>
+    <div className={`container ${className}`}>
         {children}
     </div>
   )

@@ -3,31 +3,27 @@ import Container from '../container/Container'
 
 function Navbar() {
     return (
-        <Container >
-            <div className="h-20  shadow border-b bg-blue-500 flex justify-between items-center p-2 rounded-sm"  >
-                <ul className='flex gap-2'>
-                    <li>
-                        <Link to="/" >Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/Store" >Store</Link>
-                    </li>
-                    <li>
-                        <Link to="/" ></Link>
-                    </li>
-                    <li>
-                        <Link to="/" ></Link>
-                    </li>
-
-                </ul>
+        <div className="h-20 border-b   bg-blue-50   shadow-xl  flex justify-between items-center"  >
+            <Container className='mx-auto'>
+                <div className='flex justify-between items-center '>
+                    <ul className='flex gap-2'>
+                        <li>
+                            <Link to="/" >خانه</Link>
+                        </li>
+                        <li>
+                            <Link to="/Store" >فروشگاه</Link>
+                        </li>
+                    
+                    </ul>
 
 
 
-                <div>
-                    <button> سبد خرید</button>
+                    <div>
+                        <button> سبد خرید</button>
+                    </div>
                 </div>
-            </div>
-        </Container>
+            </Container>
+        </div>
 
     )
 }
