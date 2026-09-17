@@ -3,7 +3,7 @@ import Container from '../container/Container'
 
 function Navbar() {
     return (
-        <div className="h-20 border-b   bg-blue-50   shadow-xl  flex justify-between items-center"  >
+        <div className="h-20 border-b   bg-blue-500   shadow-xl  flex justify-between items-center"  >
             <Container className='mx-auto'>
                 <div className='flex justify-between items-center '>
                     <ul className='flex gap-2'>
@@ -19,7 +19,8 @@ function Navbar() {
 
 
                     <div>
-                        <button> سبد خرید</button>
+                        
+                        <button> سبدخرید</button>
                     </div>
                 </div>
             </Container>
