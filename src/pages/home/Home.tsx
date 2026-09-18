@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div>Home</div>
+    <div>مریم عشقم دوست دارم سفید برفی من</div>
   )
 }
 
