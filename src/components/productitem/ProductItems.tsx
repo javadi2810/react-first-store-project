@@ -1,15 +1,22 @@
+type TsetColor={
+  borderColor?:string;
+}
 
+function ProductItems({borderColor}:TsetColor) {
+  // لصفا borderColor=bg-color  قرار دهید
 
-function ProductItems() {
+  let bColor=borderColor;
+  console.log(borderColor);
+  
   return (
-    <div className=" w-80 m-4 rounded-lg">
-      <div className="rounded-t-xl shadow-xl bg-gray-100  w-full p-5">
-        <img className="w-full" src="./src/assets/img/images.jpg" alt="" />
+    <div className={` w-90 bg-${borderColor} rounded-2xl `}>
+      <div className="rounded-t-xl shadow-xl bg-gray-100  w-full p-5 flex flex-col gap-2">
+        <img className="w-full h-60 mt-0" src="./src/assets/img/images.jpg" alt="" />
 
-        <h2>لنوو اسلیم 3</h2>
+        <h2 className="font-bold text-xl">لنوو اسلیم 3</h2>
 
-        <p className="">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+        <p className="h-20  pb-5 box-border overflow-hidden">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
         </p>
 
 
@@ -26,7 +33,13 @@ function ProductItems() {
       <div className="grid grid-cols-5 w-full">
         <div className="bg-gray-100 col-span-1 h-15 rounded-b-xl "></div>
         <div className="bg-gray-100 col-span-3 h-15 rounded-b-4xl">
-          <div className="bg-pink-500  h-full w-full rounded-full border-5 border-green-500"></div>
+
+          <button className={`bg-pink-300  h-full w-full rounded-full border-5 ${bColor} flex justify-center items-center`}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+          </button>
+
         </div>
         <div className="bg-gray-100 col-span-1 h-15  rounded-b-xl"></div>
       </div>

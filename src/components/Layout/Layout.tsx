@@ -9,7 +9,7 @@ type tLayout={
 
 function Layout({children , className}:tLayout) {
   return (
-        <div className={` ${className}`}>
+        <div  className={className}>
             <Navbar />
             {children}
         </div>
