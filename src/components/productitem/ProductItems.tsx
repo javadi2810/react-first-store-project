@@ -11,7 +11,7 @@ function ProductItems({borderColor}:TsetColor) {
   return (
     <div className={` w-90 bg-${borderColor} rounded-2xl `}>
       <div className="rounded-t-xl shadow-xl bg-gray-100  w-full p-5 flex flex-col gap-2">
-        <img className="w-full h-60 mt-0" src="./src/assets/img/images.jpg" alt="" />
+        <img className="w-full h-60 mt-0" src="./src/assets/img/" alt="" />
 
         <h2 className="font-bold text-xl">لنوو اسلیم 3</h2>
 
