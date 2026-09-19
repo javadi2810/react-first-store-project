@@ -3,7 +3,7 @@ type TsetColor={
 }
 
 function ProductItems({borderColor}:TsetColor) {
-  // لصفا borderColor=bg-color  قرار دهید
+  // لصفا borderColor=bg-color  قرار دهید   
 
   let bColor=borderColor;
   console.log(borderColor);
