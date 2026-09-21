@@ -1,5 +1,97 @@
+import { Link } from "react-router-dom"
 import Container from "../../components/container/Container"
 import ProductItems from "../../components/productitem/ProductItems"
+
+
+let procuct=[
+  {
+    id:1,
+    url:"./images/images.jpg",
+    name:"لنوو اسلیم 3",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:2,
+    url:"./images/MacBook Neo LLA-A18 Pro.webp",
+    name:"MacBook Neo LLA-A18 Pro",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:3,
+    url:"./images/ایسوز TUF Gaming.webp",
+    name:"ایسوز TUF Gaming",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:4,
+    url:"./images/لپ تاپ 15.6 اینچی اچ‌ پی مدل Victus .webp",
+    name:"لپ تاپ 15.6 اینچی اچ‌ پی مدل Victus ",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:5,
+    url:"./images/لپ تاپ 15.6 اینچی ایسوس مدلVivobook 15 X1504VA-Core 5.webp",
+    name:"لپ تاپ 15.6 اینچی اچ‌ پی مدل Victus ",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:6,
+    url:"./images/لپ‌تاپ ایسوس مدل Vivobook 15 X1504VA-NJ379.webp",
+    name:"لپ‌تاپ ایسوس مدل Vivobook 15 X1504VA-NJ379",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:7,
+    url:"./images/لپ‌تاپ لنوو مدل IdeaPad 1 15IJL7.webp",
+    name:"لپ‌تاپ لنوو مدل IdeaPad 1 15IJL7",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:8,
+    url:"./images/لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC.webp",
+    name:"لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:8,
+    url:"./images/لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC.webp",
+    name:"لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:8,
+    url:"./images/لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC.webp",
+    name:"لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:8,
+    url:"./images/لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC.webp",
+    name:"لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  },
+  {
+    id:8,
+    url:"./images/لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC.webp",
+    name:"لپ‌تاپ مایکروسافت مدلSurface Laptop 7 Copilot Plus PC",
+    abute:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+    price:"160,000,000",
+  }
+]
+
+
+
 
 function Store() {
   return (
@@ -7,16 +99,17 @@ function Store() {
       <div className="bg-green-300  h-full">
         <Container >
           <div className="grid grid-cols-1 min-[750px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-            <ProductItems borderColor="border-green-300"/>
-            <ProductItems borderColor="border-green-300"/>
-            <ProductItems borderColor="border-green-300"/>
-            <ProductItems borderColor="border-green-300"/>
-            <ProductItems borderColor="border-green-300"/>
-            <ProductItems borderColor="border-green-300"/>
-            <ProductItems borderColor="border-green-300"/>
-            <ProductItems borderColor="border-green-300"/>
-            <ProductItems borderColor="border-green-300"/>
-         
+              {
+                procuct.map((product)=>{
+                  return(
+                    <Link to={`/Productpage/:${product.id}`}>
+                    <ProductItems  borderColor="border-green-300" products={product} />
+                    </Link>
+                  )
+                })
+              }
+           
+      
           </div>
 
         </Container>

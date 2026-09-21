@@ -1,32 +1,41 @@
-import image from "../../assets/img/images.jpg";
-
-<img src={image} alt="" />
-type TsetColor={
-  borderColor?:string;
+type Tproduct = {
+  borderColor?: string;
+  products: {
+    id: number;
+    url:string;
+    name: string;
+    abute: string;
+    price: string;
+  };
 }
 
-function ProductItems({borderColor}:TsetColor) {
+function ProductItems({ borderColor, products}: Tproduct) {
   // لصفا borderColor=bg-color  قرار دهید   
 
-  let bColor=borderColor;
-  console.log(borderColor);
-  
+  let bColor = borderColor;
+  console.log(products.name);
+
   return (
     <div className={` w-90 bg-${borderColor} rounded-2xl `}>
       <div className="rounded-t-xl shadow-xl bg-gray-100  w-full p-5 flex flex-col gap-2">
-        <img className="w-full h-60 mt-0" src={image} alt="" />
+        <img className="w-full h-60 mt-0" src={products.url} alt="" />
 
-        <h2 className="font-bold text-xl">لنوو اسلیم 3</h2>
+        <h2 className="font-bold text-xl">
+          {products.name}
+        </h2>
 
-        <p className="h-20  pb-5 box-border overflow-hidden">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
-        </p>
+        <div className="p-4 h-20">
+          <p className="line-clamp-2">
+           {products.abute}
+          </p>
+
+        </div>
 
 
         <div className="price flex justify-between">
           <div>قیمت :</div>
           <div>
-            <span>150,000,000,</span>
+            <span>{products.price}</span>
             <span>تومان</span>
           </div>
         </div>
