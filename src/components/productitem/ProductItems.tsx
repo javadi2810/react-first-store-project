@@ -1,6 +1,6 @@
 type Tproduct = {
   borderColor?: string;
-  products: {
+  products?: {
     id: number;
     url:string;
     name: string;
