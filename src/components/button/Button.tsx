@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react";
-import type React from "react";
+
 
 type Tbutton=ComponentProps<"button">;
 

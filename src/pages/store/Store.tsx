@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import Container from "../../components/container/Container"
 import ProductItems from "../../components/productitem/ProductItems"
 import productData from '../../assets/data/productData'
