@@ -2,8 +2,9 @@ import Button from "../button/Button";
 import { Link } from "react-router-dom";
 
 type Tproduct = {
+  buttonContent:React.ReactNode;
   borderColor?: string;
-  products?: {
+  products: {
     id: number;
     url: string;
     name: string;
@@ -12,15 +13,15 @@ type Tproduct = {
   };
 }
 
-function ProductItems({ borderColor, products }: Tproduct) {
+function ProductItems({ borderColor, products ,buttonContent}: Tproduct) {
   // لصفا borderColor=bg-color  قرار دهید   
 
   return (
     <div className={` w-90 bg-${borderColor} rounded-2xl `}>
       <div className="rounded-t-xl shadow-xl bg-gray-100  w-full p-5 flex flex-col gap-2">
-        <img className="w-full h-60 mt-0" src={products.url} alt="" />
+        <img className="w-full h-60 mt-0" src={products.url} alt={products.name} />
 
-        <h2 className="font-bold text-xl">
+        <h2 className="font-bold text-xl line-clamp-1">
           {products.name}
         </h2>
 
@@ -46,10 +47,10 @@ function ProductItems({ borderColor, products }: Tproduct) {
         <div className="bg-gray-100 col-span-1 h-15 rounded-b-xl "></div>
         <div className="bg-gray-100 col-span-3 h-15 rounded-b-4xl">
 
-          <Link to={`/Productpage/:${products.id}`}>
+          <Link to={`/Productpage/${products.id}`}>
             <Button
               className={`bg-pink-300  h-full w-full rounded-full border-5 ${borderColor} flex justify-center items-center`}>
-              بیشتر
+              {buttonContent}
             </Button>
           </Link>
 

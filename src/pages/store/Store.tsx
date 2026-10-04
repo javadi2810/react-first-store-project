@@ -12,7 +12,7 @@ function Store() {
             {
               productData.map((product) => {
                 return (
-                    <ProductItems borderColor="border-green-300" products={product} />
+                    <ProductItems buttonContent="بیشتر" borderColor="border-green-300" products={product} />
                 )
               })
             }
