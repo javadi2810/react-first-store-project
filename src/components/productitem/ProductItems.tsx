@@ -3,7 +3,16 @@ import { Link } from "react-router-dom";
 
 type Tproduct = {
   buttonContent:React.ReactNode;
-  borderColor?: string;
+
+  
+  /**
+   * کلاس کامل بوردر دکمه — باید با کلاس پس‌زمینه‌ی صفحه ست باشه.
+   * 
+   * @example "border-blue-300" برای صفحه‌ای با bg-blue-300
+   */
+  borderColor: string; 
+
+
   products: {
     id: number;
     url: string;
@@ -17,7 +26,7 @@ function ProductItems({ borderColor, products ,buttonContent}: Tproduct) {
   // لصفا borderColor=bg-color  قرار دهید   
 
   return (
-    <div className={` w-90 bg-${borderColor} rounded-2xl `}>
+    <div className={` w-90 bg-inherit rounded-2xl `}>
       <div className="rounded-t-xl shadow-xl bg-gray-100  w-full p-5 flex flex-col gap-2">
         <img className="w-full h-60 mt-0" src={products.url} alt={products.name} />
 
@@ -49,7 +58,7 @@ function ProductItems({ borderColor, products ,buttonContent}: Tproduct) {
 
           <Link to={`/Productpage/${products.id}`}>
             <Button
-              className={`bg-pink-300  h-full w-full rounded-full border-5 ${borderColor} flex justify-center items-center`}>
+              className={`bg-pink-300  h-full w-full rounded-full border-5 ${borderColor}  flex justify-center items-center`}>
               {buttonContent}
             </Button>
           </Link>

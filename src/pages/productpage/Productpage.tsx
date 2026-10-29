@@ -16,7 +16,7 @@ function Productpage() {
     )
   }
   return (
-    <div className="h-screen bg-blue-300">
+    <div className="h-screen bg-blue-300 []">
       <Container>
 
         <ProductItems

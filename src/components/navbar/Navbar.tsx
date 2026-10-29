@@ -16,6 +16,9 @@ function Navbar() {
                         <li>
                             <a href="https://the-to-do-list-5z9e.vercel.app/">فهرست کارها</a>
                         </li>
+                         <li>
+                            <a href="https://deutsch-menschen.vercel.app/">Menschen</a>
+                        </li>
                     
                     </ul>
 
